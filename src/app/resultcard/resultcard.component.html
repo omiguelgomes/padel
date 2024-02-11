@@ -1,0 +1,11 @@
+<ion-card class="centered-card" [routerLink]="['/resultpage', result.id]">
+  <ion-card-header>
+    <ion-card-title>{{ result.club }}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    {{ result.score }}
+  </ion-card-content>
+  <ion-card-content class="background">
+    <ion-img src="assets/court.png"></ion-img>
+  </ion-card-content>
+</ion-card>

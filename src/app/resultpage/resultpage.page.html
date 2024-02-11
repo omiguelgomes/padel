@@ -1,0 +1,40 @@
+<ion-content>
+  <ion-card>
+    <ion-grid>
+      <ion-row class="ion-justify-content-between ion-align-items-center">
+        <!--  TEAM A  -->
+        <ion-col class="teeamA" size="4">
+          <ion-row *ngFor="let player of teamA">
+            <ion-item>
+              <ion-avatar slot="start">
+                <img alt="Playar {{player.name}}" src="{{player.photo}}" />
+              </ion-avatar>
+              <ion-label>{{ player.name }}</ion-label>
+            </ion-item>
+          </ion-row>
+        </ion-col>
+
+        <!--  SCORE  -->
+        <ion-col class="results" size="4">
+          <ion-row *ngFor="let game of score" class="ion-justify-content-around">
+            <ion-item>
+              <ion-label>{{ game[0] }} - {{ game[1] }}</ion-label>
+            </ion-item>
+          </ion-row>
+        </ion-col>
+
+        <!--  TEAM B  -->
+        <ion-col class="teamB" size="4">
+          <ion-row *ngFor="let player of teamB">
+            <ion-item>
+              <ion-avatar slot="start">
+                <img alt="Playar {{player.name}}" src="{{player.photo}}" />
+              </ion-avatar>
+              <ion-label>{{ player.name }}</ion-label>
+            </ion-item>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>

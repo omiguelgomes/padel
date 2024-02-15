@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ResultpagePageRoutingModule } from './resultpage-routing.module';
+import { ResultpagePageRoutingModule } from './result-routing.module';
 
-import { ResultpagePage } from './resultpage.page';
+import { ResultPage } from './result.page';
 
 @NgModule({
   imports: [
@@ -15,6 +15,6 @@ import { ResultpagePage } from './resultpage.page';
     IonicModule,
     ResultpagePageRoutingModule
   ],
-  declarations: [ResultpagePage]
+  declarations: [ResultPage]
 })
 export class ResultpagePageModule {}

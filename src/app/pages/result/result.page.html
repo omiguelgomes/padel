@@ -16,7 +16,7 @@
 
         <!--  SCORE  -->
         <ion-col class="results" size="4">
-          <ion-row *ngFor="let game of score" class="ion-justify-content-around">
+          <ion-row *ngFor="let game of match?.getScore()" class="ion-justify-content-around">
             <ion-item>
               <ion-label>{{ game[0] }} - {{ game[1] }}</ion-label>
             </ion-item>

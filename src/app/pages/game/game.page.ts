@@ -3,10 +3,10 @@ import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-gamepage',
-  templateUrl: './gamepage.page.html',
-  styleUrls: ['./gamepage.page.scss'],
+  templateUrl: './game.page.html',
+  styleUrls: ['./game.page.scss'],
 })
-export class GamepagePage implements OnInit {
+export class GamePage implements OnInit {
   availableGames = [
     { id: 0,  club: "Norte Padel",  time: "Thursday 15:30",  details: "More details here" },
     { id: 1,  club: "Norte Padel",  time: "Friday 18:30",    details: "More details here" },

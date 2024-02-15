@@ -7,7 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { HomePageRoutingModule } from './home-routing.module';
 
 import { HomePage } from './home.page';
-import {ResultcardComponent} from "../resultcard/resultcard.component";
+import {ResultcardComponent} from "@components/resultcard/resultcard.component";
 
 @NgModule({
   imports: [

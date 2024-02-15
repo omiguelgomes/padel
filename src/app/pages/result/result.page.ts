@@ -1,12 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
+import {MatchService} from "@services/match/match.service";
+import {Match} from "@app/models/match";
 
 @Component({
   selector: 'app-resultpage',
-  templateUrl: './resultpage.page.html',
-  styleUrls: ['./resultpage.page.scss'],
+  templateUrl: './result.page.html',
+  styleUrls: ['./result.page.scss'],
 })
-export class ResultpagePage implements OnInit {
+export class ResultPage implements OnInit {
   friendResults = [
     { id: 0,  club: "Norte Padel",  score: [[6, 1], [1, 6], [6, 4]] },
     { id: 1,  club: "Norte Padel",  score: [[6, 5], [6, 2], [1, 6]] },
@@ -22,13 +24,14 @@ export class ResultpagePage implements OnInit {
     { id: 11, club: "Norte Padel",  score: [[6, 2], [1, 6], [6, 4]] }
   ];
 
-  protected score!: any;
+  protected match!: Match | null;
   protected teamA!: any;
   protected teamB!: any;
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private service : MatchService) { }
 
-  ngOnInit() {
-    this.score = this.friendResults[Number(this.route.snapshot.paramMap.get('id'))]['score'];
+  async ngOnInit() {
+    this.match = await this.service.getMatch(1);
+    console.log(this.match)
     this.teamA = [{name: 'Miguel Gomes', photo: 'https://www.w3schools.com/w3images/avatar2.png'}, {name: 'Ricardo Bento', photo: 'https://www.w3schools.com/w3images/avatar2.png'}]
     this.teamB = [{name: 'Vasco Palmeirim', photo: 'https://www.w3schools.com/w3images/avatar2.png'}, {name: 'Patricia Figueiredo', photo: 'https://www.w3schools.com/w3images/avatar2.png'}]
   }

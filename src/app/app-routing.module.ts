@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: 'gamepage/:id',
-    loadChildren: () => import('@pages/game/game.module').then(m => m.GamepagePageModule)
+    loadChildren: () => import('@pages/match/match.module').then(m => m.MatchPageModule)
   },
   {
     path: 'profile/:id',

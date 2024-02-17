@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { GamepagePageRoutingModule } from './game-routing.module';
+import { GamepagePageRoutingModule } from './match-routing.module';
 
-import { GamePage } from './game.page';
+import { MatchPage } from './match.page';
 
 @NgModule({
   imports: [
@@ -15,6 +15,6 @@ import { GamePage } from './game.page';
     IonicModule,
     GamepagePageRoutingModule
   ],
-  declarations: [GamePage]
+  declarations: [MatchPage]
 })
-export class GamepagePageModule {}
+export class MatchPageModule {}

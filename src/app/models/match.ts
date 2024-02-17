@@ -4,12 +4,7 @@ export class Match {
   private matchData: MatchInterface;
 
   constructor(private data: string) {
-    console.log(data)
     this.matchData = JSON.parse(data) as MatchInterface;
-    console.log(this.matchData);
-    console.log(this.matchData.id);
-    console.log(this.matchData.teams);
-    console.log(this.matchData.score);
     this.validateData();
   }
 
@@ -18,7 +13,7 @@ export class Match {
       console.error("Invalid number of teams");
       return false;
     }
-    if(this.matchData.score.length != 2) {
+    if(this.matchData.score.length != 3) {
       console.error("Invalid number of scores");
       return false;
     }
